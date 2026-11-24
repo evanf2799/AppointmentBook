@@ -1,6 +1,10 @@
 public class AppointmentBook {
+    private boolean[][] schedule;
+    public AppointmentBook(boolean[][] schedule) {
+        this.schedule = schedule;
+    }
     private boolean isMinuteFree(int period, int minute) {
-        //impl not shown
+        return schedule[period - 1][minute];
     }
     private void reserveBlock(int period, int startMinute, int duration) {
         //impl not shown
