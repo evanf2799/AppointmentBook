@@ -1,5 +1,5 @@
 public class Main {
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
         boolean[][] schedule = new boolean[8][60];
         AppointmentBook a = new AppointmentBook(schedule);
         // make minutes 10-14 avaliable
