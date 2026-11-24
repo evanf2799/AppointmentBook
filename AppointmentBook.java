@@ -10,7 +10,15 @@ public class AppointmentBook {
         //impl not shown
     }
     public int findFreeBlock(int period, int duration) {
-        //impl shown (a)
+        int block = 0;
+        for (int i = 0; i < 60; i++) {
+            if (isMinuteFree(period, i)) {
+                block++;
+                if (block == duration) return i - duration + 1;
+                else block = 0;
+            }
+        }
+        return -1;
     }
     public boolean makeAppointment(int startPeriod, int endPeriod, int duration) {
         //impl shown (b)
